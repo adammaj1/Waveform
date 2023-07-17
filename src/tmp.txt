@@ -1,0 +1,200 @@
+const char * sGradientJoiningType[] = {"no" , "steps" , "tubes"};
+
+
+
+
+
+double ModifyPosition(const double position, const GradientJoiningType GradientJoining){
+	
+	// input position  should be in  [0,1] range 
+	double p = position; // p = local copy of position
+	// if position > 1 then we have repetition of colors = periodic function = wave   
+	
+	
+	switch(GradientJoining){
+	
+		case no : {break;} // return input position witout modifications
+		
+		// periodic waves with different joinings
+		case steps : {	p = p * segments; // periodic  = change range
+				p = frac(p); 
+    				break;}
+    				
+		case tubes : {	p = p * segments; // periodic = change range
+				int ip = (int)p;
+      				p = p-ip; // fractional part 
+      				if (ip % 2) {p = 1.0-p;} // reverse gradient
+				break;}
+		default:{}
+	}
+	return p; // output in [0,1] range
+}
+
+
+
+
+
+
+void GiveGrayGammaColor(double position, unsigned char c[]){
+  /*
+    #from gnuplot
+    gamma = 2.2
+    color(gray) = gray**(1./gamma)
+    set palette model RGB functions color(gray), color(gray), color(gray) # A gamma-corrected black and white palette
+	
+  */	double gamma = 2.2;
+  double p = pow(position, 1.0/gamma);
+  unsigned char X =  255*p;
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+void GiveGrayColorNL3Wave2(double position, unsigned char c[]){
+	
+  int segments=2;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      if (p % 2)
+	{position = 1.0-position;} // reverse gradient
+    }
+				 
+
+  unsigned char X =  255- 255*(position*position*position);
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+
+
+void GiveGrayColorNL3Wave10(double position, unsigned char c[]){
+	
+  int segments=10;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      if (p % 2)
+	{position = 1.0-position;} // reverse gradient
+    }
+				 
+
+  unsigned char X =  255- 255*(position*position*position);
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+
+void GiveGrayColorSqrtWave(double position, unsigned char c[]){
+  int segments=10;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      if (p % 2)
+	{position = 1.0-position;} // reverse gradient
+    }
+				 
+
+	
+  unsigned char X =  255*sqrt(position);
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+
+
+
+void GiveGrayColorLWave(double position, unsigned char c[]){
+	
+  int segments=10;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      			
+    }
+				 
+
+  unsigned char X =  255- 255*position;
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+
+void GiveGrayColorLWaveInverted(double position, unsigned char c[]){
+	
+  int segments=10;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      if (p % 2)
+	{position = 1.0-position;} // reverse gradient
+    }
+				 
+
+  unsigned char X =  255- 255*position;
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
+
+
+
+void GiveGrayColorNL3Wave5NonInv(double position, unsigned char c[]){
+	
+  int segments=5;
+  position= segments*position;
+  /* if position > 1 then we have repetition of colors it maybe useful    */
+  if (position>1.0)
+    {	int p = (int)position;
+      position=position-p; // fractional part 
+      			
+    }
+				 
+
+  unsigned char X =  255- 255*(position*position*position);
+  // change range 
+  c[0] = X; //R
+  c[1] = X; // G
+  c[2] = X; // B	
+	
+
+}
+
