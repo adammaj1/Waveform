@@ -23,9 +23,18 @@
 
 Compile and run the program
 
-
-    make
+```
+gcc d.c -Wall -Wextra -lm
+a.out > c.txt
+gnuplot
+plot "c.txt" with lines 
+# save image as a c.png
+```
    
+
+Similar repo
+* [1D-RGB-color-gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
+
 
 
 # Git
