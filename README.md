@@ -34,7 +34,9 @@ plot "c.txt" with lines
 
 Similar repo
 * [1D-RGB-color-gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
-
+* [Shaping functions in GLSL by Patricio Gonzalez Vivo & Jen Lowe](https://thebookofshaders.com/05/)
+* [curves by kynd.inf ](https://www.flickr.com/photos/kynd/9546075099/in/photostream/)
+* [GraphToy by Iñigo Quilez = a tool to visualize GLSL functions in WebGL](https://graphtoy.com/)
 
 
 # Git
