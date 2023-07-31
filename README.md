@@ -464,19 +464,19 @@ smoothstep_Piecewise_Polynomial_tubes
   inv_smoothstep_Piecewise_Polynomial 
  inv_smoothstep_Piecewise_Polynomial_no
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_no.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_no.png )
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_no_2D.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_no_2D.png )
  inv_smoothstep_Piecewise_Polynomial_steps
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_steps.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_steps.png )
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_steps_2D.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_steps_2D.png )
  inv_smoothstep_Piecewise_Polynomial_tubes
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_tubes.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_tubes.png )
  
- ![](./png/ inv_smoothstep_Piecewise_Polynomial_tubes_2D.png )
+ ![](./png/inv_smoothstep_Piecewise_Polynomial_tubes_2D.png )
  
  smoothstep_Trigonometric 
 smoothstep_Trigonometric_no
