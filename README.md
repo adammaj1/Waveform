@@ -1,5 +1,5 @@
 # Waveform
-[Waveform](https://en.wikipedia.org/wiki/Waveform) or data types or function type or shaping functions
+[Waveform](https://en.wikipedia.org/wiki/Waveform) or data types or function type or shaping functions or 1D gray color gradient
 
 
 # old images ( d.c)
@@ -806,6 +806,8 @@ double Give_s(const double position){
 }
 ```
 
+S directory contains c program for creating code for plot.gp and g.c
+
 
 
 
@@ -836,7 +838,7 @@ by Iñigo Quilez
 * [useful little functions ](https://iquilezles.org/articles/functions/)
 * [smoothsteps/](https://iquilezles.org/articles/smoothsteps/)
 * [smoothstep integral](https://iquilezles.org/articles/smoothstepintegral/)
-  
+* [mega polynomial curve](https://www.shadertoy.com/view/sltfRs)   
   
 Smoothstep
 * [wikipedia](https://en.wikipedia.org/wiki/Smoothstep)
