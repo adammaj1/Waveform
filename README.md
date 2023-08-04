@@ -847,7 +847,7 @@ Smoothstep
 * [RSL: Using smoothstep](https://www.fundza.com/rman_shaders/smoothstep/index.html)
 * [interpolations tricks](https://solhsa.com/interpolation/) or How I Learned to Stop Worrying and Love the 0..1 Range by  Jari Komppa
   
-[Polynomial Shaping Functions](www.flong.com/archive/texts/code/shapers_poly): This page presents a collection of polynomial functions for shaping, tweening, and easing signals in the range [0...1]. Functions include:
+[Polynomial Shaping Functions](https://www.flong.com/archive/texts/code/shapers_poly): This page presents a collection of polynomial functions for shaping, tweening, and easing signals in the range [0...1]. Functions include:
 * Blinn-Wyvill Approximation to the Raised Inverted Cosine
 * Double-Cubic Seat
 * Double-Cubic Seat with Linear Blend
@@ -855,13 +855,13 @@ Smoothstep
 * Symmetric Double-Polynomial Sigmoids
 * Quadratic Through a Given Point
 
-[Exponential Shaping Functions](www.flong.com/archive/texts/code/shapers_exp)
+[Exponential Shaping Functions](https://www.flong.com/archive/texts/code/shapers_exp)
 * Exponential Ease-In and Ease-Out
 * Double-Exponential Seat
 * Double-Exponential Sigmoid
 * The Logistic Sigmoid
 
-[Circular & Elliptical Shaping Functions](www.flong.com/archive/texts/code/shapers_circ)
+[Circular & Elliptical Shaping Functions](https://www.flong.com/archive/texts/code/shapers_circ)
 * Circular Interpolation: Ease-In and Ease-Out 
 * Double-Circle Seat
 * Double-Circle Sigmoid
@@ -870,7 +870,7 @@ Smoothstep
 * Double-Linear with Circular Fillet
 * Circular Arc Through a Given Points
 
-[Bezier and Other Parametric Shaping Functions](www.flong.com/archive/texts/code/shapers_bez)
+[Bezier and Other Parametric Shaping Functions](https://www.flong.com/archive/texts/code/shapers_bez)
 * Quadratic Bezier
 * Cubic Bezier
 * Cubic Bezier (Nearly) Through Two Given Points
