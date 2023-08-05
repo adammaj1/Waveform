@@ -1,14 +1,14 @@
 # Waveform
 [Waveform](https://en.wikipedia.org/wiki/Waveform) 
 * data types 
-* function type 
-  * shaping functions 
-  * Easing functions specify the rate of change of a parameter over time
+* functions  
+  * [shaping functions](https://www.flong.com/archive/texts/code/shapers_poly/)  shaping signals in the normalized range [0, 1]
+  * [Easing functions specify the rate of change of a parameter over time](https://easings.net/en)
   * Tweening functions
-* 1D gray color gradient
+* [1D gray color gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
 * Pattern Master
 * Unit generators
-* Interpolation curves or  interpolations
+* Interpolation curves or interpolations
 
 
 
@@ -62,14 +62,23 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 # old images ( d.c)
 ![](./png/continous.png "") = made from linear function (using no type of joining )
 
+
+
 ![](./png/discrete.png "") 
 
+
+
 [Sawtooth wave](https://en.wikipedia.org/wiki/Sawtooth_wave) = made from linear function using steps type of joining 
+
+
+
 
 ![](./png/sawtooth.png "") 
 
 
 [Sine wave](https://en.wikipedia.org/wiki/Sine_wave)
+
+
 
 ![](./png/sin.png "") 
 
@@ -77,7 +86,11 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 [Piecewise linear functions](https://en.wikipedia.org/wiki/Piecewise_linear_function):  [Boxcar function](https://en.wikipedia.org/wiki/Boxcar_function) or [square waveform](https://en.wikipedia.org/wiki/Waveform) or  [Rectangular function](https://en.wikipedia.org/wiki/Rectangular_function), the simplest [step_function](https://en.wikipedia.org/wiki/Step_function)
 
 
+
+
 ![](./png/square.png "") 
+
+
 
 [Triangle wave](https://en.wikipedia.org/wiki/Triangle_wave) = made from linear function using tubes type of joining  
 
