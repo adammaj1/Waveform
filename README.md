@@ -1,22 +1,26 @@
-# Waveform
-[Waveform](https://en.wikipedia.org/wiki/Waveform) 
+# Description
+* [waveform](https://en.wikipedia.org/wiki/Waveform) 
 * data types 
 * functions  
   * [shaping functions](https://www.flong.com/archive/texts/code/shapers_poly/)  shaping signals in the normalized range [0, 1]
   * [Easing functions specify the rate of change of a parameter over time](https://easings.net/en)
-  * Tweening functions
-* [1D gray color gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
+  * [Tweening functions: The purpose of a tweening function is to deliver a position for a specific time, given the tween’s essential characteristics. These characteristics are beginning position, final position, and duration](http://robertpenner.com/easing/penner_chapter7_tweening.pdf). It is used in Flash for describe time related motion
+  * [1D gray color gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
 * Pattern Master
 * Unit generators
 * Interpolation curves or interpolations
+* [Parametric acceleration curves for animations](https://cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html)
+
+
+[Names or nomenclature comparison](./src/doc/comparison.md)
 
 
 
-All work in the range [0..1].
+All functions work in the range [0..1].
 
 
 
-Algorithm:
+# Algorithm:
 * take input function f which maps floating point number (x or position) in a normalised range [0.0, 1.0] and gives monotone output ( [A monotonically non-decreasing function](https://en.wikipedia.org/wiki/Monotonic_function) )
 * make function diagram  and color gradient ( image of continous color gradient) using above function
 * make 3 types of periodic waves for each function type using ModifyPosition function
@@ -59,10 +63,25 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 ```
 
 
-# old images ( d.c)
+
+So workflow 
+
+$float x \to ModifyPosition \to GiveRGB_Gray \to Give_color \to color $
 
 
-![](./png/continous.png "") = made from linear function (using no type of joining )
+# old images ( made using ./src/d/d.c)
+
+
+[Linear function](https://en.wikipedia.org/wiki/Linear_function) graph = made using [continous_data function ](./src/d/d.c)
+
+
+![](./png/continous.png "") 
+
+
+
+
+
+[Step function](https://en.wikipedia.org/wiki/Step_function) graph. Made using [discrete_data function](./src/d/d.c) 
 
 
 
@@ -72,7 +91,7 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 
 
 
-[Sawtooth wave](https://en.wikipedia.org/wiki/Sawtooth_wave) = made from linear function using steps type of joining 
+[Sawtooth wave](https://en.wikipedia.org/wiki/Sawtooth_wave) graph.  Made using [sawtooth_data function which includes steps type of joining](./src/d/d.c) 
 
 
 
@@ -95,7 +114,7 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 
 
 
-[Piecewise linear functions](https://en.wikipedia.org/wiki/Piecewise_linear_function):  [Boxcar function](https://en.wikipedia.org/wiki/Boxcar_function) or [square waveform](https://en.wikipedia.org/wiki/Waveform) or  [Rectangular function](https://en.wikipedia.org/wiki/Rectangular_function), the simplest [step_function](https://en.wikipedia.org/wiki/Step_function)
+[Piecewise linear functions](https://en.wikipedia.org/wiki/Piecewise_linear_function):  [Boxcar function](https://en.wikipedia.org/wiki/Boxcar_function) or [square waveform](https://en.wikipedia.org/wiki/Waveform) or  [Rectangular function](https://en.wikipedia.org/wiki/Rectangular_function), the simplest [step_function](https://en.wikipedia.org/wiki/Step_function). It is made using [square_wave function ](./src/d/d.c) 
 
 
 
@@ -110,7 +129,7 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 ![](./png/tubes.png "") 
 
 
-# new images (g,c)
+# new images ( made using ./src/g/g.c)
 
 
  Linear 
@@ -905,7 +924,7 @@ S directory contains c program for creating code for plot.gp and g.c
 
 
 
-# curves
+# all curves in one image 
 
 [curves by kynd.inf ](https://www.flickr.com/photos/kynd/9546075099/in/photostream/)
 
@@ -928,12 +947,12 @@ Screen shot from  [online WebGL demo](https://www.polymonster.co.uk/pmtech/examp
 * [online WebGL demo](https://www.polymonster.co.uk/pmtech/examples/maths_functions.html)
 * [larsenwork: easing-gradients/](https://larsenwork.com/easing-gradients/) Linear gradients often have hard edges where they start and/or end. We can avoid those by controlling the color mix with easing functions.
 * [FlexMonkey: Interpolation-Playground-](https://github.com/FlexMonkey/Interpolation-Playground-)
-* [easings](https://easings.net/en)
+* [Easing Functions Cheat Sheet](https://easings.net/en)
 
 
 # Similar repo
 * [1D-RGB-color-gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
-* [Golan Levin: Pattern_Master](https://github.com/golanlevin/Pattern_Master)
+* [Golan Levin: Pattern_Master](https://github.com/golanlevin/Pattern_Master) for Processing
 * [p5.js-func](https://idmnyu.github.io/p5.js-func/): Function Generators for p5.js
 * [Shaping functions in GLSL by Patricio Gonzalez Vivo & Jen Lowe](https://thebookofshaders.com/05/)
 * [curves by kynd.inf ](https://www.flickr.com/photos/kynd/9546075099/in/photostream/)
@@ -942,12 +961,15 @@ Screen shot from  [online WebGL demo](https://www.polymonster.co.uk/pmtech/examp
 
 
 Easing functions
+* each easing function has 3 variants: ease-in, ease-out, and ease-in-out 
 * [Easing Equations by @nicmulvaney](https://web.archive.org/web/20230627221335/https://gizma.com/easing/)
 * [EASING EQUATIONS by Robert Penner - github](https://github.com/danro/tweenman-as3/blob/master/Easing.as)
 * [EASING EQUATIONS by Robert Penner - www](http://robertpenner.com/easing/)
-* [AHEasing: A supplemental library of easing functions for C, C++, and Objective-C](https://github.com/warrenm/AHEasing)
+* [Tweening chapter of  Robert Penner's book](http://robertpenner.com/easing/penner_chapter7_tweening.pdf)
+* [AHEasing: A supplemental library of easing functions for C, C++, and Objective-C](https://github.com/warrenm/AHEasing) by Warren Moore
 * [Parametric acceleration curves in Core Animation, September 9, 2008 by Matt Gallagher](https://cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html)
 * [stackoverflow question: how-to-create-custom-easing-function-with-core-animation](https://stackoverflow.com/questions/5161465/how-to-create-custom-easing-function-with-core-animation)
+* [Robert Penner's easing equations converted to coffeescript.](https://github.com/jimjeffers/Easie) by Jim Jeffers
 
 by Iñigo Quilez
 * [GraphToy  = a tool to visualize GLSL functions in WebGL](https://graphtoy.com/), only function of 2 variables:  f(x,t) 
@@ -1007,8 +1029,21 @@ Smoothstep
 * Wobble
 * Gaussian
 
+#Inspiration
+--------
 
-
+This work is a spiritual descendent (not to say derivative work) of works done by the following individuals:
+* [Robert Penner](http://www.robertpenner.com/easing/)
+* [Golan Levin](https://www.flong.com/)
+* [Warren Moore](https://github.com/warrenm)
+* [George McGinley Smith](http://gsgd.co.uk/sandbox/jquery/easing/)
+* [James Padolsey](http://james.padolsey.com/demos/jquery/easing/)
+* [Authors of jQuery](http://plugins.jquery.com/project/Easing)
+* [Matt Gallagher](http://cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html)
+* [Jesse Crossen](http://stackoverflow.com/questions/5161465/how-to-create-custom-easing-function-with-core-animation)
+* [Iñigo Quilez](https://iquilezles.org) 
+* [Andrey Sitnik](https://sitnik.ru/en/) 
+* [Jim Jeffers](https://github.com/jimjeffers)
 
 # Dictionary
 * lerp = linear interpolation
@@ -1035,6 +1070,7 @@ git push -u origin main
 ```
 
 Subdirectory
+---------------
 
 ```
 mkdir images
@@ -1057,3 +1093,25 @@ git mv -f
 ```
 
 local repo : 
+--------------
+
+~/Dokumenty/Waveform
+
+
+License
+------------------
+File LICENSE must be in main repo directory to be read by github
+
+
+Github
+* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+* [md cheat sheet](http://mdcheatsheet.com/)
+* [CommonMark Spec](https://spec.commonmark.org)
+* [Markdown parser ](https://markdown-it.github.io/)
+
+
+Math equation inside README.md
+* $\sqrt{3x-1}+(1+x)^2$
+
+
+
