@@ -1,19 +1,88 @@
 # Waveform
-[Waveform](https://en.wikipedia.org/wiki/Waveform) or data types or function type or shaping functions or 1D gray color gradient
+[Waveform](https://en.wikipedia.org/wiki/Waveform) 
+* data types 
+* function type 
+  * shaping functions 
+  * Easing functions specify the rate of change of a parameter over time
+  * Tweening functions
+* 1D gray color gradient
+* Pattern Master
+* Unit generators
+* Interpolation curves or  interpolations
+
+
+
+All work in the range [0..1].
+
+
+
+Algorithm:
+* take input function f which maps floating point number (x or position) in a normalised range [0.0, 1.0] and gives monotone output ( [A monotonically non-decreasing function](https://en.wikipedia.org/wiki/Monotonic_function) )
+* make function diagram  and color gradient ( image of continous color gradient) using above function
+* make 3 types of periodic waves for each function type using ModifyPosition function
+* make color diagram and color gradient for each GradientJoiningType of input function
+
+```
+typedef enum  {no, steps, tubes } GradientJoiningType; 
+
+
+
+double ModifyPosition(const double position, const GradientJoiningType GradientJoining){
+	
+	// input position  should be in  [0,1] range 
+	double p = position; // p = local copy of position
+	// if position > 1 then we have repetition of colors = periodic function = wave   
+	
+	
+	switch(GradientJoining){
+	
+		case no : {break;} // return input position witout modifications
+		
+		// periodic waves with different joinings
+		case steps : {	p = p * segments; // periodic  = change range
+				p = frac(p); 
+    				break;}
+    				
+		case tubes : {	p = p * segments; // periodic = change range
+				int ip = (int)p;
+      				p = p-ip; // fractional part 
+      				if (ip % 2) {p = 1.0-p;} // reverse gradient
+				break;}
+		default:{}
+	}
+	
+	return p; // output in [0,1] range
+
+}
+
+
+```
 
 
 # old images ( d.c)
-![](./png/continous.png "") 
+![](./png/continous.png "") = made from linear function (using no type of joining )
 
 ![](./png/discrete.png "") 
 
+[Sawtooth wave](https://en.wikipedia.org/wiki/Sawtooth_wave) = made from linear function using steps type of joining 
+
 ![](./png/sawtooth.png "") 
+
+
+[Sine wave](https://en.wikipedia.org/wiki/Sine_wave)
 
 ![](./png/sin.png "") 
 
+
+[Piecewise linear functions](https://en.wikipedia.org/wiki/Piecewise_linear_function):  [Boxcar function](https://en.wikipedia.org/wiki/Boxcar_function) or [square waveform](https://en.wikipedia.org/wiki/Waveform) or  [Rectangular function](https://en.wikipedia.org/wiki/Rectangular_function), the simplest [step_function](https://en.wikipedia.org/wiki/Step_function)
+
+
 ![](./png/square.png "") 
 
-![](./png/sawtooth.png "") 
+[Triangle wave](https://en.wikipedia.org/wiki/Triangle_wave) = made from linear function using tubes type of joining  
+
+
+![](./png/tubes.png "") 
 
 
 # new images (g,c)
@@ -821,17 +890,31 @@ Screen shot from  [online WebGL demo](https://www.polymonster.co.uk/pmtech/examp
 
 ![](./png/curves.png )
 
+# online demos
+* [jQuery easing; illustrated by James Padolsey](https://j11y.io/demos/jquery/easing/)
+* [online WebGL demo](https://www.polymonster.co.uk/pmtech/examples/maths_functions.html)
+* [larsenwork: easing-gradients/](https://larsenwork.com/easing-gradients/) Linear gradients often have hard edges where they start and/or end. We can avoid those by controlling the color mix with easing functions.
+* [FlexMonkey: Interpolation-Playground-](https://github.com/FlexMonkey/Interpolation-Playground-)
+* [easings](https://easings.net/en)
 
 
 # Similar repo
 * [1D-RGB-color-gradient](https://github.com/adammaj1/1D-RGB-color-gradient)
+* [Golan Levin: Pattern_Master](https://github.com/golanlevin/Pattern_Master)
+* [p5.js-func](https://idmnyu.github.io/p5.js-func/): Function Generators for p5.js
 * [Shaping functions in GLSL by Patricio Gonzalez Vivo & Jen Lowe](https://thebookofshaders.com/05/)
 * [curves by kynd.inf ](https://www.flickr.com/photos/kynd/9546075099/in/photostream/)
-* [Easing Equations by @nicmulvaney](https://web.archive.org/web/20230627221335/https://gizma.com/easing/)
-* [EASING EQUATIONS by Robert Penner](https://github.com/danro/tweenman-as3/blob/master/Easing.as)
-* [FlexMonkey: Interpolation-Playground-](https://github.com/FlexMonkey/Interpolation-Playground-)
-* [online WebGL demo](https://www.polymonster.co.uk/pmtech/examples/maths_functions.html)
 
+
+
+
+Easing functions
+* [Easing Equations by @nicmulvaney](https://web.archive.org/web/20230627221335/https://gizma.com/easing/)
+* [EASING EQUATIONS by Robert Penner - github](https://github.com/danro/tweenman-as3/blob/master/Easing.as)
+* [EASING EQUATIONS by Robert Penner - www](http://robertpenner.com/easing/)
+* [AHEasing: A supplemental library of easing functions for C, C++, and Objective-C](https://github.com/warrenm/AHEasing)
+* [Parametric acceleration curves in Core Animation, September 9, 2008 by Matt Gallagher](https://cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html)
+* [stackoverflow question: how-to-create-custom-easing-function-with-core-animation](https://stackoverflow.com/questions/5161465/how-to-create-custom-easing-function-with-core-animation)
 
 by Iñigo Quilez
 * [GraphToy  = a tool to visualize GLSL functions in WebGL](https://graphtoy.com/), only function of 2 variables:  f(x,t) 
@@ -874,6 +957,38 @@ Smoothstep
 * Quadratic Bezier
 * Cubic Bezier
 * Cubic Bezier (Nearly) Through Two Given Points
+
+
+[List of interpolations](https://github.com/FlexMonkey/Interpolation-Playground-)
+* Linear Interpolation
+* Smooth Step
+* Smoother Step
+* Smoothest Step
+* Squared
+* Inverse Squared
+* Cubed
+* Sin
+* Catmull-Rom
+* Elastic In
+* Elastic Out
+* Wobble
+* Gaussian
+
+
+
+
+# Dictionary
+* lerp = linear interpolation
+* Easing functions specify the rate of change of a parameter over time.
+* [Exponential decay](https://en.wikipedia.org/wiki/Exponential_decay)
+* [Exponential growth](https://en.wikipedia.org/wiki/Exponential_growth): Exponential growth is the inverse of logarithmic growth
+* [Logarithmic growth](https://en.wikipedia.org/wiki/Logarithmic_growth): Logarithmic growth is the inverse of exponential growth and is very slow
+* linear growth ( linear function):  y = f(x) ; proportional or directly proportional if their corresponding elements have a constant ratio
+* [Quadratic_growth](https://en.wikipedia.org/wiki/Quadratic_growth)
+* [Hyperbolic_growth](https://en.wikipedia.org/wiki/Hyperbolic_growth): If the output of a function is inversely proportional to its input, or inversely proportional to the difference from a given value x0, the function will exhibit hyperbolic growth, with a singularity at x0
+* [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation), see Orders of common functions
+
+
 
 # Git
 
