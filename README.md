@@ -60,11 +60,15 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 
 
 # old images ( d.c)
+
+
 ![](./png/continous.png "") = made from linear function (using no type of joining )
 
 
 
+
 ![](./png/discrete.png "") 
+
 
 
 
@@ -76,11 +80,19 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 ![](./png/sawtooth.png "") 
 
 
+
+
+
 [Sine wave](https://en.wikipedia.org/wiki/Sine_wave)
 
 
 
+
+
 ![](./png/sin.png "") 
+
+
+
 
 
 [Piecewise linear functions](https://en.wikipedia.org/wiki/Piecewise_linear_function):  [Boxcar function](https://en.wikipedia.org/wiki/Boxcar_function) or [square waveform](https://en.wikipedia.org/wiki/Waveform) or  [Rectangular function](https://en.wikipedia.org/wiki/Rectangular_function), the simplest [step_function](https://en.wikipedia.org/wiki/Step_function)
@@ -902,6 +914,14 @@ S directory contains c program for creating code for plot.gp and g.c
 Screen shot from  [online WebGL demo](https://www.polymonster.co.uk/pmtech/examples/maths_functions.html)
 
 ![](./png/curves.png )
+
+
+
+[available animation transition types: (the default transition type, 'linear', was omitted)](https://wiki.sparrow-framework.org/_media/manual/transitions.png) from the [wiki of the Sparrow Framework](https://wiki.sparrow-framework.org/manual/animation) — the Open Source Game Engine for iOS.
+
+
+![](./png/transitions.png)
+
 
 # online demos
 * [jQuery easing; illustrated by James Padolsey](https://j11y.io/demos/jquery/easing/)
