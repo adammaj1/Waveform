@@ -965,11 +965,13 @@ Easing functions
 * [Easing Equations by @nicmulvaney](https://web.archive.org/web/20230627221335/https://gizma.com/easing/)
 * [EASING EQUATIONS by Robert Penner - github](https://github.com/danro/tweenman-as3/blob/master/Easing.as)
 * [EASING EQUATIONS by Robert Penner - www](http://robertpenner.com/easing/)
-* [Tweening chapter of  Robert Penner's book](http://robertpenner.com/easing/penner_chapter7_tweening.pdf)
+* [Tweening chapter of  Robert Penner's book: Programming Macromedia Flash MX](http://robertpenner.com/easing/penner_chapter7_tweening.pdf)
 * [AHEasing: A supplemental library of easing functions for C, C++, and Objective-C](https://github.com/warrenm/AHEasing) by Warren Moore
 * [Parametric acceleration curves in Core Animation, September 9, 2008 by Matt Gallagher](https://cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html)
 * [stackoverflow question: how-to-create-custom-easing-function-with-core-animation](https://stackoverflow.com/questions/5161465/how-to-create-custom-easing-function-with-core-animation)
 * [Robert Penner's easing equations converted to coffeescript.](https://github.com/jimjeffers/Easie) by Jim Jeffers
+* [Understanding Easing (Explaining Penner’s equations) – JavaScript and ActionScript ](https://upshots.org/)
+* [easing-functions in CSS ](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function)
 
 by Iñigo Quilez
 * [GraphToy  = a tool to visualize GLSL functions in WebGL](https://graphtoy.com/), only function of 2 variables:  f(x,t) 
@@ -1033,7 +1035,7 @@ Smoothstep
 --------
 
 This work is a spiritual descendent (not to say derivative work) of works done by the following individuals:
-* [Robert Penner](http://www.robertpenner.com/easing/)
+* [Robert Penner](http://www.robertpenner.com/easing/): Created the first flexible, reusable Easing functions …which are the cornerstone of all JS animation techniques today
 * [Golan Levin](https://www.flong.com/)
 * [Warren Moore](https://github.com/warrenm)
 * [George McGinley Smith](http://gsgd.co.uk/sandbox/jquery/easing/)
@@ -1044,6 +1046,8 @@ This work is a spiritual descendent (not to say derivative work) of works done b
 * [Iñigo Quilez](https://iquilezles.org) 
 * [Andrey Sitnik](https://sitnik.ru/en/) 
 * [Jim Jeffers](https://github.com/jimjeffers)
+
+
 
 # Dictionary
 * lerp = linear interpolation
@@ -1095,7 +1099,7 @@ git mv -f
 local repo : 
 --------------
 
-~/Dokumenty/Waveform
+~/Dokumenty/c/Waveform
 
 
 License
