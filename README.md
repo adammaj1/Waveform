@@ -64,9 +64,12 @@ double ModifyPosition(const double position, const GradientJoiningType GradientJ
 
 
 
-So workflow 
+So important variables: 
+* coordinate ( integer to float)
+* position ( float )
+* color (RGB) : float to integer in [0 , 255] range
 
-$float x \to ModifyPosition \to GiveRGB_Gray \to Give_color \to color $
+
 
 
 # old images ( made using ./src/d/d.c)
@@ -138,11 +141,13 @@ Linear_no
  ![](./png/Linear_no.png )
  
  ![](./png/Linear_no_2D.png )
+ 
 Linear_steps
  
  ![](./png/Linear_steps.png )
  
  ![](./png/Linear_steps_2D.png )
+ 
 Linear_tubes
  
  ![](./png/Linear_tubes.png )
@@ -155,11 +160,13 @@ Quadratic_no
  ![](./png/Quadratic_no.png )
  
  ![](./png/Quadratic_no_2D.png )
+ 
 Quadratic_steps
  
  ![](./png/Quadratic_steps.png )
  
  ![](./png/Quadratic_steps_2D.png )
+ 
 Quadratic_tubes
  
  ![](./png/Quadratic_tubes.png )
@@ -172,11 +179,13 @@ Cubic_no
  ![](./png/Cubic_no.png )
  
  ![](./png/Cubic_no_2D.png )
+ 
 Cubic_steps
  
  ![](./png/Cubic_steps.png )
  
  ![](./png/Cubic_steps_2D.png )
+ 
 Cubic_tubes
  
  ![](./png/Cubic_tubes.png )
@@ -189,11 +198,13 @@ CubicInv_no
  ![](./png/CubicInv_no.png )
  
  ![](./png/CubicInv_no_2D.png )
+ 
 CubicInv_steps
  
  ![](./png/CubicInv_steps.png )
  
  ![](./png/CubicInv_steps_2D.png )
+ 
 CubicInv_tubes
  
  ![](./png/CubicInv_tubes.png )
@@ -206,11 +217,13 @@ Sqrt_no
  ![](./png/Sqrt_no.png )
  
  ![](./png/Sqrt_no_2D.png )
+ 
 Sqrt_steps
  
  ![](./png/Sqrt_steps.png )
  
  ![](./png/Sqrt_steps_2D.png )
+ 
 Sqrt_tubes
  
  ![](./png/Sqrt_tubes.png )
@@ -223,11 +236,13 @@ Root_no
  ![](./png/Root_no.png )
  
  ![](./png/Root_no_2D.png )
+ 
 Root_steps
  
  ![](./png/Root_steps.png )
  
  ![](./png/Root_steps_2D.png )
+ 
 Root_tubes
  
  ![](./png/Root_tubes.png )
@@ -716,11 +731,13 @@ quaImpulse_no
  ![](./png/quaImpulse_no.png )
  
  ![](./png/quaImpulse_no_2D.png )
+ 
 quaImpulse_steps
  
  ![](./png/quaImpulse_steps.png )
  
  ![](./png/quaImpulse_steps_2D.png )
+ 
 quaImpulse_tubes
  
  ![](./png/quaImpulse_tubes.png )
@@ -733,11 +750,13 @@ polyImpulse_no
  ![](./png/polyImpulse_no.png )
  
  ![](./png/polyImpulse_no_2D.png )
+ 
 polyImpulse_steps
  
  ![](./png/polyImpulse_steps.png )
  
  ![](./png/polyImpulse_steps_2D.png )
+ 
 polyImpulse_tubes
  
  ![](./png/polyImpulse_tubes.png )
@@ -750,11 +769,13 @@ expSustainedImpulse_no
  ![](./png/expSustainedImpulse_no.png )
  
  ![](./png/expSustainedImpulse_no_2D.png )
+ 
 expSustainedImpulse_steps
  
  ![](./png/expSustainedImpulse_steps.png )
  
  ![](./png/expSustainedImpulse_steps_2D.png )
+ 
 expSustainedImpulse_tubes
  
  ![](./png/expSustainedImpulse_tubes.png )
@@ -767,11 +788,13 @@ cubicPulse_no
  ![](./png/cubicPulse_no.png )
  
  ![](./png/cubicPulse_no_2D.png )
+ 
 cubicPulse_steps
  
  ![](./png/cubicPulse_steps.png )
  
  ![](./png/cubicPulse_steps_2D.png )
+ 
 cubicPulse_tubes
  
  ![](./png/cubicPulse_tubes.png )
@@ -784,11 +807,13 @@ expStep_no
  ![](./png/expStep_no.png )
  
  ![](./png/expStep_no_2D.png )
+ 
 expStep_steps
  
  ![](./png/expStep_steps.png )
  
  ![](./png/expStep_steps_2D.png )
+ 
 expStep_tubes
  
  ![](./png/expStep_tubes.png )
@@ -801,11 +826,13 @@ gain_no
  ![](./png/gain_no.png )
  
  ![](./png/gain_no_2D.png )
+ 
 gain_steps
  
  ![](./png/gain_steps.png )
  
  ![](./png/gain_steps_2D.png )
+ 
 gain_tubes
  
  ![](./png/gain_tubes.png )
@@ -818,11 +845,13 @@ parabola_no
  ![](./png/parabola_no.png )
  
  ![](./png/parabola_no_2D.png )
+ 
 parabola_steps
  
  ![](./png/parabola_steps.png )
  
  ![](./png/parabola_steps_2D.png )
+ 
 parabola_tubes
  
  ![](./png/parabola_tubes.png )
@@ -835,11 +864,13 @@ pcurve_no
  ![](./png/pcurve_no.png )
  
  ![](./png/pcurve_no_2D.png )
+ 
 pcurve_steps
  
  ![](./png/pcurve_steps.png )
  
  ![](./png/pcurve_steps_2D.png )
+ 
 pcurve_tubes
  
  ![](./png/pcurve_tubes.png )
@@ -852,11 +883,13 @@ sinc_no
  ![](./png/sinc_no.png )
  
  ![](./png/sinc_no_2D.png )
+ 
 sinc_steps
  
  ![](./png/sinc_steps.png )
  
  ![](./png/sinc_steps_2D.png )
+ 
 sinc_tubes
  
  ![](./png/sinc_tubes.png )
@@ -869,19 +902,31 @@ trunc_fallof_no
  ![](./png/trunc_fallof_no.png )
  
  ![](./png/trunc_fallof_no_2D.png )
+ 
 trunc_fallof_steps
  
  ![](./png/trunc_fallof_steps.png )
  
  ![](./png/trunc_fallof_steps_2D.png )
+ 
 trunc_fallof_tubes
  
  ![](./png/trunc_fallof_tubes.png )
  
  ![](./png/trunc_fallof_tubes_2D.png )
+ 
+ 
 # source code
 
-D directort
+## MWE 
+
+[MRE = minimal reproducible ( working) example = short simple code](https://stackoverflow.com/help/minimal-reproducible-example)
+
+
+
+
+
+## D directort
 * [d.c](./src/d/d.c)
 * results of the program  are in [the text files (./src/*.txt)](./src/d)
 
@@ -897,7 +942,7 @@ plot "c.txt" with lines
 ```
 
 
-G directory
+## G directory
 
   make
 
@@ -972,6 +1017,9 @@ Easing functions
 * [Robert Penner's easing equations converted to coffeescript.](https://github.com/jimjeffers/Easie) by Jim Jeffers
 * [Understanding Easing (Explaining Penner’s equations) – JavaScript and ActionScript ](https://upshots.org/)
 * [easing-functions in CSS ](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function)
+* [easy.c](./src/easy.c)
+
+
 
 by Iñigo Quilez
 * [GraphToy  = a tool to visualize GLSL functions in WebGL](https://graphtoy.com/), only function of 2 variables:  f(x,t) 
@@ -986,6 +1034,11 @@ Smoothstep
 * [smoothstep-looking-for-a-continuous-family-of-interpolation-functions](https://math.stackexchange.com/questions/1749250/smoothstep-looking-for-a-continuous-family-of-interpolation-functions) 
 * [RSL: Using smoothstep](https://www.fundza.com/rman_shaders/smoothstep/index.html)
 * [interpolations tricks](https://solhsa.com/interpolation/) or How I Learned to Stop Worrying and Love the 0..1 Range by  Jari Komppa
+
+
+Shaping functions
+* [shape.c](./src/shape.c)
+
   
 [Polynomial Shaping Functions](https://www.flong.com/archive/texts/code/shapers_poly): This page presents a collection of polynomial functions for shaping, tweening, and easing signals in the range [0...1]. Functions include:
 * Blinn-Wyvill Approximation to the Raised Inverted Cosine
@@ -1031,7 +1084,7 @@ Smoothstep
 * Wobble
 * Gaussian
 
-#Inspiration
+# Inspiration
 --------
 
 This work is a spiritual descendent (not to say derivative work) of works done by the following individuals:
@@ -1050,7 +1103,7 @@ This work is a spiritual descendent (not to say derivative work) of works done b
 
 
 # Dictionary
-* lerp = linear interpolation
+* [lerp = linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) 
 * Easing functions specify the rate of change of a parameter over time.
 * [Exponential decay](https://en.wikipedia.org/wiki/Exponential_decay)
 * [Exponential growth](https://en.wikipedia.org/wiki/Exponential_growth): Exponential growth is the inverse of logarithmic growth
