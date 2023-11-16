@@ -922,11 +922,13 @@ trunc_fallof_tubes
 
 [MRE = minimal reproducible ( working) example = short simple code](https://stackoverflow.com/help/minimal-reproducible-example)
 
-[code in ./src/mwe/ directory](./src/mwe/):
+[code in ./src/mwe/ directory](./src/mwe/)
 
 
 
 ## D directort
+
+One file program that makes all images
 * [d.c](./src/d/d.c)
 * results of the program  are in [the text files (./src/*.txt)](./src/d)
 
@@ -943,6 +945,11 @@ plot "c.txt" with lines
 
 
 ## G directory
+
+[code in ./src/g/ directory](./src/g/)
+
+
+One file program that makes all images. To run it: 
 
   make
 
