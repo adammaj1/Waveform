@@ -268,6 +268,10 @@ Gamma_tubes
  
  LSin 
 LSin_no
+
+effect of a sine wave superimposed on a ramp function
+
+It is based on [the The Colour Map Test Image by Peter Kovesi](https://colorcet.com/testimage/index.html)
  
  ![](./png/LSin_no.png )
  
